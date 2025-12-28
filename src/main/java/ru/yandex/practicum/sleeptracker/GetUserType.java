@@ -3,7 +3,7 @@ package ru.yandex.practicum.sleeptracker;
 import java.time.LocalTime;
 import java.util.List;
 
-public class GetUserType implements SleepAnalysisFunction{
+public class GetUserType implements SleepAnalysisFunction {
     @Override
     public SleepAnalysisResult analyze(List<SleepingSession> sessions) {
         if (sessions.isEmpty()) {
