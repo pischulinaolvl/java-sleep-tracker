@@ -32,7 +32,7 @@ public class CountSleeplessNightTest {
 
     @Test
     @DisplayName("Проверка метода findMinStartDate")
-    public void testFindMinStartDate(){
+    public void testFindMinStartDate() {
         //Исполнение
         Optional<LocalDateTime> minStartDate = CountSleeplessNight.findMinStartDate(sessions);
         // Проверка
@@ -41,7 +41,7 @@ public class CountSleeplessNightTest {
 
     @Test
     @DisplayName("Проверка метода findMaxEndDate")
-    public void testFindMaxEndDate(){
+    public void testFindMaxEndDate() {
         //Исполнение
         Optional<LocalDateTime> maxEndDate = CountSleeplessNight.findMaxEndDate(sessions);
         // Проверка
@@ -50,7 +50,7 @@ public class CountSleeplessNightTest {
 
     @Test
     @DisplayName("Проверка метода findNight")
-    public void testFindNight(){
+    public void testFindNight() {
         // Проверка
         Assertions.assertEquals(CountSleeplessNight.findNight(sessions.get(0)).orElseGet(() -> LocalDate.parse("01.01.01", DATE_FORMATTER)), LocalDate.parse("02.10.25", DATE_FORMATTER));
         Assertions.assertEquals(CountSleeplessNight.findNight(sessions.get(1)).isEmpty(), true);
