@@ -16,6 +16,6 @@ class AvgSessionDuration implements SleepAnalysisFunction {
                 .average()
                 .orElse(0);
 
-        return new SleepAnalysisResult( (int)avgDirection,"Средняя продолжительность сессии");
+        return new SleepAnalysisResult((int)avgDirection,"Средняя продолжительность сессии");
     }
 }
