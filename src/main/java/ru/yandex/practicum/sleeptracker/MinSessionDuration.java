@@ -16,6 +16,6 @@ class MinSessionDuration implements SleepAnalysisFunction {
                 .min()
                 .orElse(0);
 
-        return new SleepAnalysisResult( minDirection,"Минимальная продолжительность сессии");
+        return new SleepAnalysisResult(minDirection,"Минимальная продолжительность сессии");
     }
 }

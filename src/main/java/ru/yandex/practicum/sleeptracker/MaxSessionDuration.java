@@ -16,6 +16,6 @@ class MaxSessionDuration implements SleepAnalysisFunction {
                 .max()
                 .orElse(0);
 
-        return new SleepAnalysisResult( maxDirection,"Максимальная продолжительность сессии");
+        return new SleepAnalysisResult(maxDirection,"Максимальная продолжительность сессии");
     }
 }
