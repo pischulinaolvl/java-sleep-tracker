@@ -7,7 +7,7 @@ import java.time.LocalTime;
 import java.util.List;
 import java.util.Optional;
 
-public class CountSleeplessNight implements SleepAnalysisFunction{
+public class CountSleeplessNight implements SleepAnalysisFunction {
 
     @Override
     public SleepAnalysisResult analyze(List<SleepingSession> sessions) {
@@ -42,21 +42,21 @@ public class CountSleeplessNight implements SleepAnalysisFunction{
         }
     }
 
-    public static Optional<LocalDateTime> findMinStartDate(List<SleepingSession> sessions){
+    public static Optional<LocalDateTime> findMinStartDate(List<SleepingSession> sessions) {
         return sessions
                 .stream()
                 .map(SleepingSession::getStartDate)
                 .min(LocalDateTime::compareTo);
     }
 
-    public static Optional<LocalDateTime> findMaxEndDate(List<SleepingSession> sessions){
+    public static Optional<LocalDateTime> findMaxEndDate(List<SleepingSession> sessions) {
         return sessions
                 .stream()
                 .map(SleepingSession::getStartDate)
                 .max(LocalDateTime::compareTo);
     }
 
-    public static Optional<LocalDate> findNight(SleepingSession session){
+    public static Optional<LocalDate> findNight(SleepingSession session) {
         if (session.getStartDate().toLocalDate().isEqual(session.getEndDate().toLocalDate()) && session.getStartDate().toLocalTime().isAfter(LocalTime.of(6,0)) && session.getEndDate().toLocalTime().isBefore(LocalTime.of(23,59))) {
             return Optional.empty();
         } else if (session.getStartDate().toLocalDate().isAfter(session.getEndDate().toLocalDate())) {
