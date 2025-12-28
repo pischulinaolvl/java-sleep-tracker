@@ -1,8 +1,6 @@
 package ru.yandex.practicum.sleeptracker;
 
-import java.time.Duration;
 import java.util.List;
-import java.util.stream.Collectors;
 
 class CountBadSession implements SleepAnalysisFunction {
     @Override
