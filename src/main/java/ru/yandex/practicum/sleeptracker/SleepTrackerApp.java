@@ -29,6 +29,8 @@ public class SleepTrackerApp {
             functions.add(new MaxSessionDuration());
             functions.add(new AvgSessionDuration());
             functions.add(new CountBadSession());
+            functions.add(new CountSleeplessNight());
+            functions.add(new GetUserType());
 
             functions.stream()
                     .map(function -> function.analyze(sleepingSessionList))
