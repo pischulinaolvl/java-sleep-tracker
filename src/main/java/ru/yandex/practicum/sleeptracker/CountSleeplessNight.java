@@ -52,7 +52,7 @@ public class CountSleeplessNight implements SleepAnalysisFunction {
     public static Optional<LocalDateTime> findMaxEndDate(List<SleepingSession> sessions) {
         return sessions
                 .stream()
-                .map(SleepingSession::getStartDate)
+                .map(SleepingSession::getEndDate)
                 .max(LocalDateTime::compareTo);
     }
 
